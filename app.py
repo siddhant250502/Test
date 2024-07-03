@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-app = FastAPI()
-@app.get("/{person}")
+main = FastAPI()
+@main.get("/{person}")
 async def root(person):
     dict = {'aniketh':
         {'height':120,
@@ -14,7 +14,7 @@ async def root(person):
          'Weight': 100}
 }    
     return dict[person]
-@app.get("/{surname}")
+@main.get("/{surname}")
 async def toor(surname):
     fname = ""
     if surname == 'jambha':
